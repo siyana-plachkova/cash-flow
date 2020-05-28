@@ -3,4 +3,6 @@ Rails.application.routes.draw do
 
   root to: 'home#index'
 
+  get 'categories', to: 'categories#index'
+
 end
