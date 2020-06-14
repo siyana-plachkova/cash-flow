@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   root to: 'home#index'
 
   get 'categories', to: 'categories#index'
+  get 'categories/new', to: 'categories#new'
 
 end
