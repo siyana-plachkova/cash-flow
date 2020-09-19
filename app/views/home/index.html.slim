@@ -2,7 +2,7 @@ h1 style="text-align: center; padding: 1em" Welcome to CashFlow
 
 .container
   div.d-flex.justify-content-end style="padding: 0.7em"
-    a href="#"
+    a href="#" data-toggle="modal" data-target="#exampleModal"
       img src="https://img.icons8.com/ios-glyphs/30/000000/add.png"
 
   table.table.table-hover
@@ -72,3 +72,37 @@ h1 style="text-align: center; padding: 1em" Welcome to CashFlow
         a class="page-link" href="#" >
       li class="page-item"
         a class="page-link" href="#" >>
+
+.modal tabindex="-1" id="exampleModal"
+  .modal-dialog
+    .modal-content
+      .modal-header
+        h5.modal-title Modal title
+        button.close type="button" data-dismiss="modal" aria-label="Close"
+          span aria-hidden="true" &times;
+
+      .modal-body
+        form
+          .form-group
+            label Date
+            input.form-control type="text"
+          .form-group
+            label Title
+            input.form-control type="text"
+          .form-group
+            label Total
+            input.form-control type="text"
+          .form-group
+            label Category
+            select.form-control
+              option Auto
+              option Health & beauty
+              option Doggo
+          .form-group
+            label Note
+            textarea.form-control
+          button.btn.btn-primary type="submit" Add
+
+      .modal-footer
+        button.btn.btn-secondary type="button" data-dismiss="modal" Close
+        button.btn.btn-primary type="button" Save changes
