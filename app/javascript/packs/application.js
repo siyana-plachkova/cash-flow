@@ -15,7 +15,3 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
-
-$('#myModal').on('shown.bs.modal', function () {
-    $('#myInput').trigger('focus')
-})
