@@ -82,27 +82,22 @@ h1 style="text-align: center; padding: 1em" Welcome to CashFlow
           span aria-hidden="true" &times;
 
       .modal-body
-        form
-          .form-group
-            label Date
-            input.form-control type="text"
-          .form-group
-            label Title
-            input.form-control type="text"
-          .form-group
-            label Total
-            input.form-control type="text"
-          .form-group
-            label Category
-            select.form-control
-              option Auto
-              option Health & beauty
-              option Doggo
-          .form-group
-            label Note
-            textarea.form-control
-          button.btn.btn-primary type="submit" Add
 
-      .modal-footer
-        button.btn.btn-secondary type="button" data-dismiss="modal" Close
-        button.btn.btn-primary type="button" Save changes
+        = form_with model: Expense.new do |f|
+          .form-group
+            = f.label :date
+            = f.date_field :date, class: 'form-control'
+          .form-group
+            = f.label :title
+            = f.text_field :title, class: 'form-control'
+          .form-group
+            = f.label :total
+            = f.number_field :total, class: 'form-control', step: '0.01'
+          .form-group
+            = f.label :category
+            = f.select :category_id, Category.all.map { |c| [c.name, c.id] },  {include_blank: true}, class: 'form-control'
+          .form-group
+            = f.label :note
+            = f.text_area :note, class: 'form-control'
+
+          button.btn.btn-primary type="submit" Add
