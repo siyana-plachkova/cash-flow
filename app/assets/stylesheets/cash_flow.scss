@@ -5,3 +5,17 @@
     position: relative;
     top: -3px;
 }
+
+nav.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 1em 0;
+
+  > span {
+    padding: 0 .25em;
+    min-width: 1.5em;
+    text-align: center;
+    margin: 0 .25em;
+    border: 1px solid #e0e0e0;
+  }
+}

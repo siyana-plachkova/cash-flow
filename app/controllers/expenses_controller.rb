@@ -1,5 +1,4 @@
 class ExpensesController < ApplicationController
-
   def create
     Expense.create! expense_params
 
