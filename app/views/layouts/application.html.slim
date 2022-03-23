@@ -15,4 +15,8 @@ html
     = stylesheet_link_tag 'application'
 
   body
+    nav.main-nav
+      ul
+        li = link_to 'Expenses', root_path
+        li = link_to 'Categories', categories_path
     = yield

@@ -19,3 +19,14 @@ nav.pagination {
     border: 1px solid #e0e0e0;
   }
 }
+
+nav.main-nav {
+  padding-top: 1em;
+
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+  }
+  ul li { margin: 0 1em; }
+}
