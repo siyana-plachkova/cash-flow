@@ -19,8 +19,8 @@ h1 style="text-align: center; padding: 1em" Categories
       - @categories.each do |category|
         tr
           td.text-center = category.name
-          td.text-center 7
-          td.text-right 237.98
+          td.text-center = category.expenses.to_a.count
+          td.text-right = category.expenses.map(&:total).sum
           td.text-center
             = link_to category_path(category), method: :delete do
               img src="https://img.icons8.com/ios-glyphs/30/000000/delete-sign.png" style="padding: 0.2em"
