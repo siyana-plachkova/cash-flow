@@ -18,7 +18,7 @@ h1 style="text-align: center; padding: 1em" Expenses
         tr
           td.text-center = expense.date.strftime('%d %b %Y')
           td.text-center = expense.title
-          td.text-center = expense.category.name
+          td.text-center = expense.category&.name
           td.text-right = expense.total
           td.text-center
             a href="#" title=expense.note
